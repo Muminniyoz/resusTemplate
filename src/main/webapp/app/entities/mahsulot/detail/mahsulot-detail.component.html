@@ -1,0 +1,46 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="mahsulot">
+      <h2 data-cy="mahsulotDetailsHeading"><span jhiTranslate="resusTemplateApp.mahsulot.detail.title">Mahsulot</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ mahsulot.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="resusTemplateApp.mahsulot.nom">Nom</span></dt>
+        <dd>
+          <span>{{ mahsulot.nom }}</span>
+        </dd>
+        <dt><span jhiTranslate="resusTemplateApp.mahsulot.tur">Tur</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'resusTemplateApp.MahsulotTur.' + mahsulot.tur }}">{{ mahsulot.tur }}</span>
+        </dd>
+        <dt><span jhiTranslate="resusTemplateApp.mahsulot.izoh">Izoh</span></dt>
+        <dd>
+          <span>{{ mahsulot.izoh }}</span>
+        </dd>
+        <dt><span jhiTranslate="resusTemplateApp.mahsulot.mahsulotOlchov">Mahsulot Olchov</span></dt>
+        <dd>
+          <div *ngIf="mahsulot.mahsulotOlchov">
+            <a [routerLink]="['/mahsulot-olchov', mahsulot.mahsulotOlchov?.id, 'view']">{{ mahsulot.mahsulotOlchov?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/mahsulot', mahsulot.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+{
+  "name": "MahsulotOlchov",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "izoh",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "mahsulot",
+      "otherEntityRelationshipName": "mahsulotOlchov",
+      "relationshipName": "mahsulot"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "mahsulotVariant",
+      "otherEntityRelationshipName": "mahsulotOlchov",
+      "relationshipName": "mahsulotVariant"
+    }
+  ],
+  "entityTableName": "mahsulot_olchov",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210516175837"
+}

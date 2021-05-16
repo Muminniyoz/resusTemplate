@@ -1,0 +1,28 @@
+{
+  "resusTemplateApp": {
+    "mahsulot": {
+      "home": {
+        "title": "Mahsulots",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Mahsulot",
+        "createOrEditLabel": "Create or edit a Mahsulot",
+        "notFound": "No Mahsulots found"
+      },
+      "created": "A new Mahsulot is created with identifier {{ param }}",
+      "updated": "A Mahsulot is updated with identifier {{ param }}",
+      "deleted": "A Mahsulot is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Mahsulot {{ id }}?"
+      },
+      "detail": {
+        "title": "Mahsulot"
+      },
+      "id": "ID",
+      "nom": "Nom",
+      "tur": "Tur",
+      "izoh": "Izoh",
+      "mahsulotOlchov": "Mahsulot Olchov",
+      "mahsulotVariant": "Mahsulot Variant"
+    }
+  }
+}

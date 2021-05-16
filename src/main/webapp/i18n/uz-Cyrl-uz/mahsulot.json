@@ -1,0 +1,28 @@
+{
+  "resusTemplateApp": {
+    "mahsulot": {
+      "home": {
+        "title": "Mahsulots",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Янги Mahsulot қўшиш",
+        "createOrEditLabel": "Mahsulotни таҳрирлаш",
+        "notFound": "No Mahsulots found"
+      },
+      "created": "Mahsulot {{ param }} билан қўшилди.",
+      "updated": "{{ param }}- Mahsulot сақланди.",
+      "deleted": "{{ param }}- Mahsulot ўчирилди.",
+      "delete": {
+        "question": "{{ id }}- Mahsulotни ўчирмоқчимисиз? "
+      },
+      "detail": {
+        "title": "Mahsulot"
+      },
+      "id": "ID",
+      "nom": "Nom",
+      "tur": "Tur",
+      "izoh": "Izoh",
+      "mahsulotOlchov": "Mahsulot Olchov",
+      "mahsulotVariant": "Mahsulot Variant"
+    }
+  }
+}

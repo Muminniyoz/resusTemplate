@@ -42,7 +42,9 @@
     "jwtSecretKey": "ZWQ1OWZjY2I1NGYzZmI0YWE5OTJlNWQxZDMxZmQzZjZlY2ExZjNjYzI3NDk4ZGJmMWI5MDNjYTMzNjg2NTNjOWVlNTRlNjE2MDc5NjY1NTg1ZjViOGE1YzZjYTU4OTVkMDhkZjQxNzNhOGUzYmY4N2I3NmM2MTNkNTE3MDk1NDQ=",
     "clientTheme": "none",
     "clientThemeVariant": "",
-    "reactive": false
+    "reactive": false,
+    "entities": ["MahsulotOlchov", "Mahsulot", "MahsulotVariant"],
+    "lastLiquibaseTimestamp": 1621187919000
   },
   "git-provider": "GitHub",
   "git-company": "Muminniyoz",
