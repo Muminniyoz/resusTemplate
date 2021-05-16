@@ -1,0 +1,33 @@
+enum MahsulotTur{
+    DOIMIY,
+    ICHIMLIKLAR,
+    TAOMLAR,
+    SALATLAR,
+    SHIRINLIKLAR,
+    CHAKANA,
+    XIZMAT,
+    ARALASH
+    
+}
+
+entity MahsulotOlchov{
+  nom String required
+    izoh String
+}
+
+entity Mahsulot{
+  nom String required
+    tur MahsulotTur
+    izoh String
+}
+
+entity MahsulotVariant{
+  nom String    
+    izoh String
+}
+
+relationship ManyToOne {
+  Mahsulot to MahsulotOlchov,
+    MahsulotVariant to Mahsulot,
+     MahsulotVariant to MahsulotOlchov,
+}
