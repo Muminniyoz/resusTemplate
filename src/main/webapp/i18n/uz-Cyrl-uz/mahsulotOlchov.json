@@ -1,0 +1,27 @@
+{
+  "resusTemplateApp": {
+    "mahsulotOlchov": {
+      "home": {
+        "title": "Mahsulot Olchovs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Янги Mahsulot Olchov қўшиш",
+        "createOrEditLabel": "Mahsulot Olchovни таҳрирлаш",
+        "notFound": "No Mahsulot Olchovs found"
+      },
+      "created": "Mahsulot Olchov {{ param }} билан қўшилди.",
+      "updated": "{{ param }}- Mahsulot Olchov сақланди.",
+      "deleted": "{{ param }}- Mahsulot Olchov ўчирилди.",
+      "delete": {
+        "question": "{{ id }}- Mahsulot Olchovни ўчирмоқчимисиз? "
+      },
+      "detail": {
+        "title": "Mahsulot Olchov"
+      },
+      "id": "ID",
+      "nom": "Nom",
+      "izoh": "Izoh",
+      "mahsulot": "Mahsulot",
+      "mahsulotVariant": "Mahsulot Variant"
+    }
+  }
+}

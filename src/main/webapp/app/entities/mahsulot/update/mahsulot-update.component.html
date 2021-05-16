@@ -1,0 +1,89 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-mahsulot-heading" data-cy="MahsulotCreateUpdateHeading" jhiTranslate="resusTemplateApp.mahsulot.home.createOrEditLabel">
+        Create or edit a Mahsulot
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-control-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="resusTemplateApp.mahsulot.nom" for="field_nom">Nom</label>
+          <input type="text" class="form-control" name="nom" id="field_nom" data-cy="nom" formControlName="nom" />
+          <div *ngIf="editForm.get('nom')!.invalid && (editForm.get('nom')!.dirty || editForm.get('nom')!.touched)">
+            <small class="form-text text-danger" *ngIf="editForm.get('nom')?.errors?.required" jhiTranslate="entity.validation.required">
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="resusTemplateApp.mahsulot.tur" for="field_tur">Tur</label>
+          <select class="form-control" name="tur" formControlName="tur" id="field_tur" data-cy="tur">
+            <option [ngValue]="null">{{ 'resusTemplateApp.MahsulotTur.null' | translate }}</option>
+            <option value="DOIMIY">{{ 'resusTemplateApp.MahsulotTur.DOIMIY' | translate }}</option>
+            <option value="ICHIMLIKLAR">{{ 'resusTemplateApp.MahsulotTur.ICHIMLIKLAR' | translate }}</option>
+            <option value="TAOMLAR">{{ 'resusTemplateApp.MahsulotTur.TAOMLAR' | translate }}</option>
+            <option value="SALATLAR">{{ 'resusTemplateApp.MahsulotTur.SALATLAR' | translate }}</option>
+            <option value="SHIRINLIKLAR">{{ 'resusTemplateApp.MahsulotTur.SHIRINLIKLAR' | translate }}</option>
+            <option value="CHAKANA">{{ 'resusTemplateApp.MahsulotTur.CHAKANA' | translate }}</option>
+            <option value="XIZMAT">{{ 'resusTemplateApp.MahsulotTur.XIZMAT' | translate }}</option>
+            <option value="ARALASH">{{ 'resusTemplateApp.MahsulotTur.ARALASH' | translate }}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="resusTemplateApp.mahsulot.izoh" for="field_izoh">Izoh</label>
+          <input type="text" class="form-control" name="izoh" id="field_izoh" data-cy="izoh" formControlName="izoh" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="resusTemplateApp.mahsulot.mahsulotOlchov" for="field_mahsulotOlchov"
+            >Mahsulot Olchov</label
+          >
+          <select
+            class="form-control"
+            id="field_mahsulotOlchov"
+            data-cy="mahsulotOlchov"
+            name="mahsulotOlchov"
+            formControlName="mahsulotOlchov"
+          >
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="
+                mahsulotOlchovOption.id === editForm.get('mahsulotOlchov')!.value?.id
+                  ? editForm.get('mahsulotOlchov')!.value
+                  : mahsulotOlchovOption
+              "
+              *ngFor="let mahsulotOlchovOption of mahsulotOlchovsSharedCollection; trackBy: trackMahsulotOlchovById"
+            >
+              {{ mahsulotOlchovOption.id }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

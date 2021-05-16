@@ -1,0 +1,27 @@
+{
+  "resusTemplateApp": {
+    "mahsulotOlchov": {
+      "home": {
+        "title": "Mahsulot Olchovs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Mahsulot Olchov",
+        "createOrEditLabel": "Create or edit a Mahsulot Olchov",
+        "notFound": "No Mahsulot Olchovs found"
+      },
+      "created": "A new Mahsulot Olchov is created with identifier {{ param }}",
+      "updated": "A Mahsulot Olchov is updated with identifier {{ param }}",
+      "deleted": "A Mahsulot Olchov is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Mahsulot Olchov {{ id }}?"
+      },
+      "detail": {
+        "title": "Mahsulot Olchov"
+      },
+      "id": "ID",
+      "nom": "Nom",
+      "izoh": "Izoh",
+      "mahsulot": "Mahsulot",
+      "mahsulotVariant": "Mahsulot Variant"
+    }
+  }
+}

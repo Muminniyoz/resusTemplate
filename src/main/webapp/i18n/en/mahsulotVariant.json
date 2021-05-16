@@ -1,0 +1,27 @@
+{
+  "resusTemplateApp": {
+    "mahsulotVariant": {
+      "home": {
+        "title": "Mahsulot Variants",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Mahsulot Variant",
+        "createOrEditLabel": "Create or edit a Mahsulot Variant",
+        "notFound": "No Mahsulot Variants found"
+      },
+      "created": "A new Mahsulot Variant is created with identifier {{ param }}",
+      "updated": "A Mahsulot Variant is updated with identifier {{ param }}",
+      "deleted": "A Mahsulot Variant is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Mahsulot Variant {{ id }}?"
+      },
+      "detail": {
+        "title": "Mahsulot Variant"
+      },
+      "id": "ID",
+      "nom": "Nom",
+      "izoh": "Izoh",
+      "mahsulot": "Mahsulot",
+      "mahsulotOlchov": "Mahsulot Olchov"
+    }
+  }
+}

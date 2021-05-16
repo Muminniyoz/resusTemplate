@@ -48,6 +48,12 @@ public class CacheConfiguration {
             createCache(cm, uz.resus.temp.domain.User.class.getName());
             createCache(cm, uz.resus.temp.domain.Authority.class.getName());
             createCache(cm, uz.resus.temp.domain.User.class.getName() + ".authorities");
+            createCache(cm, uz.resus.temp.domain.MahsulotOlchov.class.getName());
+            createCache(cm, uz.resus.temp.domain.MahsulotOlchov.class.getName() + ".mahsulots");
+            createCache(cm, uz.resus.temp.domain.MahsulotOlchov.class.getName() + ".mahsulotVariants");
+            createCache(cm, uz.resus.temp.domain.Mahsulot.class.getName());
+            createCache(cm, uz.resus.temp.domain.Mahsulot.class.getName() + ".mahsulotVariants");
+            createCache(cm, uz.resus.temp.domain.MahsulotVariant.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
